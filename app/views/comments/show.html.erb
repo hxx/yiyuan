@@ -4,16 +4,14 @@
   <strong>Commenter:</strong>
   <%= @comment.commenter %>
 </p>
-
+ 
 <p>
-  <strong>Body:</strong>
+  <strong>Comment:</strong>
   <%= @comment.body %>
 </p>
-
-<p>
-  <strong>Article:</strong>
-  <%= @comment.article %>
-</p>
-
-<%= link_to 'Edit', edit_comment_path(@comment) %> |
-<%= link_to 'Back', comments_path %>
+ 
+<%= link_to 'Edit Comment', edit_article_comment_path(@comment.article, @comment) %> |
+<%= link_to 'Destroy Comment', [@comment.article, @comment],
+             method: :delete,
+             data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Back to Articles', articles_path %>
