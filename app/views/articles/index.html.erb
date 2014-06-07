@@ -22,6 +22,26 @@
   </tbody>
 </table>
 
+<b>Article Title</b>
+
+<ul id="articles">
+  <%= render @articles %>
+</ul>
+
 <br>
+
+<%= form_for(@article, remote: true) do |f| %>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
 
 <%= link_to 'New Article', new_article_path %>
