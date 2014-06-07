@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     @articles = Article.all
+    @article = Article.new
   end
 
   # GET /articles/1
@@ -29,7 +30,8 @@ class ArticlesController < ApplicationController
     respond_to do |format|
       if @article.save
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
-        format.json { render :show, status: :created, location: @article }
+        format.js {}
+        format.json { render json: @article, status: :created, location: @article }
       else
         format.html { render :new }
         format.json { render json: @article.errors, status: :unprocessable_entity }
