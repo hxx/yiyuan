@@ -11,6 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20140609140303) do
+
+  create_table "clients", force: true do |t|
+    t.string   "name"
+    t.string   "gender"
+    t.string   "id_card"
+    t.date     "birthdate"
+    t.integer  "age"
+    t.float    "weight"
+    t.float    "height"
+    t.string   "language"
+    t.string   "native_place"
+    t.string   "race"
+    t.string   "education"
+    t.string   "address"
+    t.string   "cellphone"
+    t.string   "email"
+    t.string   "fixed_phone"
+    t.string   "wechat_id"
+    t.string   "emergency_contact_name"
+    t.string   "emergency_contact_cellphone"
+    t.string   "emergency_contact_wechat_id"
+    t.text     "note"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
