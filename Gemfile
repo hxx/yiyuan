@@ -42,3 +42,8 @@ gem "pry-debugger", "~> 0.2.2",  group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :development do
+  # Automatically generate an entity-relationship diagram
+  # http://rails-erd.rubyforge.org/
+  gem 'rails-erd', '~> 1.1.0'
+end
