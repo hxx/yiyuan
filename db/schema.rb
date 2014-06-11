@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140611145614) do
+ActiveRecord::Schema.define(version: 20140611150020) do
 
   create_table "areas", force: true do |t|
     t.string   "name"
@@ -138,6 +138,7 @@ ActiveRecord::Schema.define(version: 20140611145614) do
   create_table "orders", force: true do |t|
     t.integer  "client_id"
     t.integer  "product_id"
+    t.integer  "creator_id"
     t.string   "state"
     t.datetime "service_start_time"
     t.datetime "service_end_time"
