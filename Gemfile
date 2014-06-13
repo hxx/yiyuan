@@ -47,3 +47,9 @@ group :development do
   # http://rails-erd.rubyforge.org/
   gem 'rails-erd', '~> 1.1.0'
 end
+
+group :test do
+  # RSpec for Rails
+  # http://github.com/rspec/rspec-rails
+  gem 'rspec-rails', '~> 3.0.1'
+end
