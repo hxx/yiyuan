@@ -61,3 +61,7 @@ gem 'carrierwave', '~> 0.10.0'
 # Add support for creating state machines for attributes on any Ruby class
 # https://github。com/pluginaweek/state_machine
 gem 'state_machine', '~> 1.2.0'
+
+# A tagging plugin for Rails applications that allows for custom tagging along dynamic contexts.
+# https://github.com/mbleigh/acts-as-taggable-on
+gem 'acts-as-taggable-on', '~> 3.2.6'
