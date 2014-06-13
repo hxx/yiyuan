@@ -74,3 +74,6 @@ gem 'simple_form', '~> 3.0.2'
 # Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-20 17:05:52 +0800
 gem 'quiet_assets', '~> 1.0.2'
 
+# minari is a Scope & Engine based, clean, powerful, agnostic, customizable and sophisticated paginator
+# https://github.com/amatsuda/kaminari
+gem 'kaminari', '~> 0.16.1'
