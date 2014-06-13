@@ -57,3 +57,7 @@ end
 # Classier solution for file uploads
 # https://github.com/carrierwaveuploader/carrierwave
 gem 'carrierwave', '~> 0.10.0'
+
+# Add support for creating state machines for attributes on any Ruby class
+# https://github。com/pluginaweek/state_machine
+gem 'state_machine', '~> 1.2.0'
