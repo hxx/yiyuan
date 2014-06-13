@@ -47,3 +47,33 @@ group :development do
   # http://rails-erd.rubyforge.org/
   gem 'rails-erd', '~> 1.1.0'
 end
+
+group :test do
+  # RSpec for Rails
+  # http://github.com/rspec/rspec-rails
+  gem 'rspec-rails', '~> 3.0.1'
+end
+
+# Classier solution for file uploads
+# https://github.com/carrierwaveuploader/carrierwave
+gem 'carrierwave', '~> 0.10.0'
+
+# Add support for creating state machines for attributes on any Ruby class
+# https://github。com/pluginaweek/state_machine
+gem 'state_machine', '~> 1.2.0'
+
+# A tagging plugin for Rails applications that allows for custom tagging along dynamic contexts.
+# https://github.com/mbleigh/acts-as-taggable-on
+gem 'acts-as-taggable-on', '~> 3.2.6'
+
+# Forms made easy for Rails! It;s tied to a simple DSL, with no opinion on markup.
+# https://github.com/plataformatec/simple_form
+gem 'simple_form', '~> 3.0.2'
+
+# Quiet assets turn off rails assets log like:
+# Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-20 17:05:52 +0800
+gem 'quiet_assets', '~> 1.0.2'
+
+# minari is a Scope & Engine based, clean, powerful, agnostic, customizable and sophisticated paginator
+# https://github.com/amatsuda/kaminari
+gem 'kaminari', '~> 0.16.1'

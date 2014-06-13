@@ -31,3 +31,24 @@ config/secrets.yml
 
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
+
+# Ignore bundler config.
+/.bundle
+
+config/database.yml
+
+.DS_Store
+
+# generate by rails_config
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
+
+# upload files
+public/uploads/*
+
+*.scssc
+Guardfile
+
+# for webStorm
+.idea/
