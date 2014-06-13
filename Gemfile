@@ -65,3 +65,7 @@ gem 'state_machine', '~> 1.2.0'
 # A tagging plugin for Rails applications that allows for custom tagging along dynamic contexts.
 # https://github.com/mbleigh/acts-as-taggable-on
 gem 'acts-as-taggable-on', '~> 3.2.6'
+
+# Forms made easy for Rails! It;s tied to a simple DSL, with no opinion on markup.
+# https://github.com/plataformatec/simple_form
+gem 'simple_form', '~> 3.0.2'
