@@ -53,3 +53,7 @@ group :test do
   # http://github.com/rspec/rspec-rails
   gem 'rspec-rails', '~> 3.0.1'
 end
+
+# Classier solution for file uploads
+# https://github.com/carrierwaveuploader/carrierwave
+gem 'carrierwave', '~> 0.10.0'
