@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140614053641) do
+ActiveRecord::Schema.define(version: 20140614054232) do
 
   create_table "areas", force: true do |t|
     t.string   "name"
@@ -139,6 +139,9 @@ ActiveRecord::Schema.define(version: 20140614053641) do
     t.integer  "client_id"
     t.integer  "product_id"
     t.integer  "creator_id"
+    t.string   "product_name"
+    t.text     "product_description"
+    t.float    "product_price"
     t.integer  "current_service_log_id"
     t.string   "state"
     t.datetime "service_start_time"
