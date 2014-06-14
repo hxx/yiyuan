@@ -19,5 +19,6 @@
  *= require icons
  *= require font-awesome.min
  * Theme CSS End
+ *= require_tree .
  *= require_self
  */
