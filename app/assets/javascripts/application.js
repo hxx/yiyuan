@@ -11,6 +11,23 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui-1.10.2.custom.min
 //= require jquery_ujs
+//= require bootstrap
+//= require lodash.compat.min
+//
+// Smartphone Touch Events Begin
+//= require jquery.ui.touch-punch.min
+//= require jquery.event.move
+//= require jquery.event.swipe
+// Smartphone Touch Events End
+//
+// General Begin
+//= require breakpoints
+//= require respond.min
+//= require jquery.cookie
+//= require jquery.slimscroll
+//= require jquery.slimscroll.horizontal
+// General End
+//
 //= require turbolinks
-//= require_tree .

@@ -1,0 +1,30 @@
+/*
+ *
+ * Melon - Flat & Responsive Admin Template
+ *
+ * ========================================================
+ *
+ * File: plugins.css
+ * Description: Contains styles for plugins, if you don't use any of plugins, you can remove its styling
+ * Version: 1.0
+ *
+ *= require jquery-ui
+ *= require daterangepicker
+ *= require uniform
+ *= require tagsinput
+ *= require select2
+ *= require duallistbox
+ *= require datatables_bootstrap
+ *= require datatables
+ *= require pickadate
+ *= require bootstrap-colorpicker
+ *= require typeahead
+ *= require fullcalendar
+ *= require nestable
+ *= require bootstrap-wysihtml5
+ *= require bootstrap-multiselect
+ *= require nprogress
+ *= require bootstrap-wizard
+ *= require bootstrap-switch
+ *= require_self
+ */
