@@ -4,7 +4,7 @@ class Order < ActiveRecord::Base
   belongs_to :client
   belongs_to :product
   belongs_to :creator, class_name: 'User'
-  belongs_to :current_service_log, class_name :'ServiceLog'
+  belongs_to :current_service_log, class_name: 'ServiceLog'
 
   state_machine :state, :initial => :pending do
     # TODO: complete the whole state machine here,
