@@ -17,7 +17,7 @@
 //= require lodash.compat.min
 //
 // Smartphone Touch Events Begin
-//= require jquery.ui.touch-punch.min
+//= require jquery.ui.touch-punch
 //= require jquery.event.move
 //= require jquery.event.swipe
 // Smartphone Touch Events End
