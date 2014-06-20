@@ -47,6 +47,26 @@ SimpleForm.setup do |config|
     b.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
   end
 
+# <%= simple_form_for hospital, html: { class: 'form-horizontal' },
+#   wrapper: :horizontal_form do |f| %>
+#   <%= f.input :name, label: '' %>
+# <% end %>
+# will generate:
+# <div class="form-horizontal row-border">
+#   <form accept-charset="UTF-8" action="/hospitals/9" class="simple_form form-horizontald="edit_hospital_9" method="post" novalidate="novalidate">
+#     <div style="display:none">
+#       <input name="utf8" type="hidden" value="">
+#       <input name="_method" type="hidden" value="patch">
+#       <input name="authenticity_token" type="hiddenalue="+uxcC7Gc7JTKcdXsIN/Z7j4paRYeadmpLuub9yhITKc=">
+#     </div>
+#     <div class="form-group string optional hospital_name">
+#       <label class="string optional col-sm-2 control-label" for="hospital_name"></label>
+#       <div class="col-sm-10">
+#         <input class="string optional form-control" id="hospital_name" name="hospital[nam type="text" value="">
+#       </div>
+#     </div>
+#   </form>
+# </div>
   config.wrappers :horizontal_form, tag: 'div', class: 'form-group', error_class: 'has-error' do |b|
     b.use :html5
     b.use :placeholder
