@@ -66,9 +66,11 @@ gem 'state_machine', '~> 1.2.0'
 # https://github.com/mbleigh/acts-as-taggable-on
 gem 'acts-as-taggable-on', '~> 3.2.6'
 
-# Forms made easy for Rails! It;s tied to a simple DSL, with no opinion on markup.
+# Forms made easy for Rails! It's tied to a simple DSL, with no opinion on markup.
+# use 3.1.0.rc1 because of "Add Bootstrap 3 initializer template"
+# rf: https://github.com/plataformatec/simple_form/blob/master/CHANGELOG.md
 # https://github.com/plataformatec/simple_form
-gem 'simple_form', '~> 3.0.2'
+gem 'simple_form', '~> 3.1.0.rc1'
 
 # Quiet assets turn off rails assets log like:
 # Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-11-20 17:05:52 +0800
