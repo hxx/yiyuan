@@ -4,7 +4,7 @@ class Order < ActiveRecord::Base
   belongs_to :client
   belongs_to :product
   belongs_to :current_service_log, class_name: 'ServiceLog'
-  belongs_to :orderable, polymorphic: true
+  belongs_to :creator, polymorphic: true
 
   before_create :setup_product_snapshot
 

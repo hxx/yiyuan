@@ -3,5 +3,5 @@ class Manager < ActiveRecord::Base
 
   has_and_belongs_to_many :hospitals
 
-  has_many :orders, as: :orderable
+  has_many :orders, as: :creator
 end
