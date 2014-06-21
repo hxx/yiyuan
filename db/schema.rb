@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140621062305) do
+ActiveRecord::Schema.define(version: 20140621062357) do
 
   create_table "administrators", force: true do |t|
     t.datetime "created_at"
@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 20140621062305) do
   end
 
   create_table "carers", force: true do |t|
-    t.integer  "carer_id"
     t.string   "staff_code"
     t.string   "name"
     t.string   "gender"
