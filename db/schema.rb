@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140621053520) do
+ActiveRecord::Schema.define(version: 20140621054530) do
 
   create_table "areas", force: true do |t|
     t.string   "name"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20140621053520) do
     t.integer "hospital_id"
   end
 
-  create_table "carer_profiles", force: true do |t|
+  create_table "carers", force: true do |t|
     t.integer  "carer_id"
     t.string   "staff_code"
     t.string   "name"
