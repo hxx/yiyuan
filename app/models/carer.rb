@@ -1,2 +1,3 @@
-class Carer < User
+class Carer < ActiveRecord::Base
+  belongs_to :hospital
 end
