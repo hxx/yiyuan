@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140614054232) do
+ActiveRecord::Schema.define(version: 20140621062357) do
+
+  create_table "administrators", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "areas", force: true do |t|
     t.string   "name"
@@ -24,8 +29,7 @@ ActiveRecord::Schema.define(version: 20140614054232) do
     t.integer "hospital_id"
   end
 
-  create_table "carer_profiles", force: true do |t|
-    t.integer  "carer_id"
+  create_table "carers", force: true do |t|
     t.string   "staff_code"
     t.string   "name"
     t.string   "gender"
@@ -76,6 +80,14 @@ ActiveRecord::Schema.define(version: 20140614054232) do
     t.datetime "updated_at"
   end
 
+  create_table "credentials", force: true do |t|
+    t.string   "email"
+    t.integer  "credentialable_id"
+    t.string   "credentialable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "departments", force: true do |t|
     t.integer  "hospital_id"
     t.string   "name"
@@ -93,8 +105,12 @@ ActiveRecord::Schema.define(version: 20140614054232) do
     t.datetime "updated_at"
   end
 
-  create_table "manager_profiles", force: true do |t|
-    t.integer  "manager_id"
+  create_table "hospitals_managers", force: true do |t|
+    t.integer "hospital_id"
+    t.integer "manager_id"
+  end
+
+  create_table "managers", force: true do |t|
     t.string   "staff_code"
     t.string   "name"
     t.string   "gender"
@@ -114,8 +130,7 @@ ActiveRecord::Schema.define(version: 20140614054232) do
     t.datetime "updated_at"
   end
 
-  create_table "operator_profiles", force: true do |t|
-    t.integer  "operator_id"
+  create_table "operators", force: true do |t|
     t.string   "staff_code"
     t.string   "name"
     t.string   "gender"
@@ -138,7 +153,10 @@ ActiveRecord::Schema.define(version: 20140614054232) do
   create_table "orders", force: true do |t|
     t.integer  "client_id"
     t.integer  "product_id"
-    t.integer  "creator_id"
+    t.string   "creator_id"
+    t.string   "creator_type"
+    t.integer  "orderable_id"
+    t.string   "orderable_type"
     t.string   "product_name"
     t.text     "product_description"
     t.float    "product_price"
@@ -166,6 +184,11 @@ ActiveRecord::Schema.define(version: 20140614054232) do
     t.datetime "updated_at"
   end
 
+  create_table "supervisors", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "taggings", force: true do |t|
     t.integer  "tag_id"
     t.integer  "taggable_id"
@@ -184,12 +207,5 @@ ActiveRecord::Schema.define(version: 20140614054232) do
   end
 
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
-
-  create_table "users", force: true do |t|
-    t.string   "email"
-    t.string   "type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
 end

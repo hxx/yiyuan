@@ -1,2 +1,3 @@
-class Supervisor < User
+class Supervisor < ActiveRecord::Base
+  has_one :credential, as: :credentialable
 end

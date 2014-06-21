@@ -79,3 +79,7 @@ gem 'quiet_assets', '~> 1.0.2'
 # minari is a Scope & Engine based, clean, powerful, agnostic, customizable and sophisticated paginator
 # https://github.com/amatsuda/kaminari
 gem 'kaminari', '~> 0.16.1'
+
+# Flexible authentication solution for Rails with Warden
+# https://github.com/plataformatec/devise
+gem 'devise', '~> 3.2.4'

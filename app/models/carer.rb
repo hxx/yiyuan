@@ -1,3 +1,5 @@
-class Carer < User
-  has_one :carer_profile, dependent: :destroy
+class Carer < ActiveRecord::Base
+  belongs_to :hospital
+
+  has_many :orders, as: :creator
 end
