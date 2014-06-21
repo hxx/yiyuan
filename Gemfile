@@ -62,10 +62,6 @@ gem 'carrierwave', '~> 0.10.0'
 # https://github。com/pluginaweek/state_machine
 gem 'state_machine', '~> 1.2.0'
 
-# A tagging plugin for Rails applications that allows for custom tagging along dynamic contexts.
-# https://github.com/mbleigh/acts-as-taggable-on
-gem 'acts-as-taggable-on', '~> 3.2.6'
-
 # Forms made easy for Rails! It's tied to a simple DSL, with no opinion on markup.
 # use 3.1.0.rc1 because of "Add Bootstrap 3 initializer template"
 # rf: https://github.com/plataformatec/simple_form/blob/master/CHANGELOG.md
