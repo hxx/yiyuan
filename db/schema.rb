@@ -153,10 +153,8 @@ ActiveRecord::Schema.define(version: 20140621062357) do
   create_table "orders", force: true do |t|
     t.integer  "client_id"
     t.integer  "product_id"
-    t.string   "creator_id"
+    t.integer  "creator_id"
     t.string   "creator_type"
-    t.integer  "orderable_id"
-    t.string   "orderable_type"
     t.string   "product_name"
     t.text     "product_description"
     t.float    "product_price"
