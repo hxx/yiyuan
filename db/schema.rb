@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140621054832) do
+ActiveRecord::Schema.define(version: 20140621055141) do
 
   create_table "areas", force: true do |t|
     t.string   "name"
@@ -170,6 +170,11 @@ ActiveRecord::Schema.define(version: 20140621054832) do
   create_table "service_logs", force: true do |t|
     t.integer  "order_id"
     t.string   "state"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "supervisors", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
