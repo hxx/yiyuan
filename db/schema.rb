@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140621055318) do
+ActiveRecord::Schema.define(version: 20140621055801) do
 
   create_table "administrators", force: true do |t|
     t.datetime "created_at"
@@ -104,6 +104,11 @@ ActiveRecord::Schema.define(version: 20140621055318) do
     t.integer  "carers_count"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "hospitals_managers", force: true do |t|
+    t.integer "hospital_id"
+    t.integer "manager_id"
   end
 
   create_table "managers", force: true do |t|
