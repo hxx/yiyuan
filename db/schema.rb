@@ -19,14 +19,14 @@ ActiveRecord::Schema.define(version: 20140621081414) do
     t.datetime "updated_at"
   end
 
-  create_table "ability_tags_carers", force: true do |t|
+  create_table "ability_tags_carers", id: false, force: true do |t|
     t.integer "ability_tag_id"
     t.integer "carer_id"
   end
 
   add_index "ability_tags_carers", ["ability_tag_id"], name: "index_ability_tags_carers_on_ability_tag_id", using: :btree
 
-  create_table "ability_tags_products", force: true do |t|
+  create_table "ability_tags_products", id: false, force: true do |t|
     t.integer "ability_tag_id"
     t.integer "product_id"
   end
