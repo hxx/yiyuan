@@ -11,13 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140621081136) do
+ActiveRecord::Schema.define(version: 20140621081414) do
 
   create_table "ability_tags", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "ability_tags_carers", force: true do |t|
+    t.integer "ability_tag_id"
+    t.integer "carer_id"
+  end
+
+  add_index "ability_tags_carers", ["ability_tag_id"], name: "index_ability_tags_carers_on_ability_tag_id", using: :btree
 
   create_table "ability_tags_products", force: true do |t|
     t.integer "ability_tag_id"
