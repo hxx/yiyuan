@@ -1,0 +1,23 @@
+<div class="crumbs">
+  <ul id="breadcrumbs" class="breadcrumb">
+    <li>
+      <i class="icon-home"></i>
+      <%= link_to "首页", root_path %>
+    </li>
+    <li class="current">
+      <%= link_to "创建能力标签", new_resource_path %>
+    </li>
+  </ul>
+</div>
+
+<div class="row">
+  <div class="widget box">
+    <div class="widget-header">
+      <h4><i class="icon-user"></i>创建新的能力标签</h4>
+    </div>
+
+    <div class="widget-content">
+      <%= render 'form', ability_tag: @ability_tag %>
+    </div>
+  </div>
+</div>

@@ -11,7 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140621062357) do
+ActiveRecord::Schema.define(version: 20140621081414) do
+
+  create_table "ability_tags", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ability_tags_carers", id: false, force: true do |t|
+    t.integer "ability_tag_id"
+    t.integer "carer_id"
+  end
+
+  add_index "ability_tags_carers", ["ability_tag_id"], name: "index_ability_tags_carers_on_ability_tag_id", using: :btree
+
+  create_table "ability_tags_products", id: false, force: true do |t|
+    t.integer "ability_tag_id"
+    t.integer "product_id"
+  end
+
+  add_index "ability_tags_products", ["ability_tag_id"], name: "index_ability_tags_products_on_ability_tag_id", using: :btree
 
   create_table "administrators", force: true do |t|
     t.datetime "created_at"
@@ -153,10 +173,8 @@ ActiveRecord::Schema.define(version: 20140621062357) do
   create_table "orders", force: true do |t|
     t.integer  "client_id"
     t.integer  "product_id"
-    t.string   "creator_id"
+    t.integer  "creator_id"
     t.string   "creator_type"
-    t.integer  "orderable_id"
-    t.string   "orderable_type"
     t.string   "product_name"
     t.text     "product_description"
     t.float    "product_price"
@@ -177,6 +195,11 @@ ActiveRecord::Schema.define(version: 20140621062357) do
     t.datetime "updated_at"
   end
 
+  create_table "products_ability_tags", force: true do |t|
+    t.integer "ability_tag_id"
+    t.integer "product_id"
+  end
+
   create_table "service_logs", force: true do |t|
     t.integer  "order_id"
     t.string   "state"
@@ -188,24 +211,5 @@ ActiveRecord::Schema.define(version: 20140621062357) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  create_table "taggings", force: true do |t|
-    t.integer  "tag_id"
-    t.integer  "taggable_id"
-    t.string   "taggable_type"
-    t.integer  "tagger_id"
-    t.string   "tagger_type"
-    t.string   "context",       limit: 128
-    t.datetime "created_at"
-  end
-
-  add_index "taggings", ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true, using: :btree
-
-  create_table "tags", force: true do |t|
-    t.string  "name"
-    t.integer "taggings_count", default: 0
-  end
-
-  add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
 
 end
