@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140622011931) do
+ActiveRecord::Schema.define(version: 20140622012137) do
 
   create_table "ability_tags", force: true do |t|
     t.string   "name"
@@ -180,6 +180,7 @@ ActiveRecord::Schema.define(version: 20140622011931) do
   end
 
   create_table "supervisors", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
