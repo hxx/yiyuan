@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140622012318) do
+ActiveRecord::Schema.define(version: 20140622012450) do
 
   create_table "ability_tags", force: true do |t|
     t.string   "name"
@@ -103,6 +103,7 @@ ActiveRecord::Schema.define(version: 20140622012318) do
 
   create_table "credentials", force: true do |t|
     t.string   "email"
+    t.string   "name"
     t.integer  "credentialable_id"
     t.string   "credentialable_type"
     t.datetime "created_at"
