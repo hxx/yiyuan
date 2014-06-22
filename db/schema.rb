@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140622011658) do
+ActiveRecord::Schema.define(version: 20140622011931) do
 
   create_table "ability_tags", force: true do |t|
     t.string   "name"
@@ -131,21 +131,7 @@ ActiveRecord::Schema.define(version: 20140622011658) do
   end
 
   create_table "managers", force: true do |t|
-    t.string   "staff_code"
     t.string   "name"
-    t.string   "gender"
-    t.string   "id_card"
-    t.date     "birthday"
-    t.integer  "age"
-    t.integer  "weight"
-    t.integer  "height"
-    t.string   "native_place"
-    t.string   "race"
-    t.string   "political_status"
-    t.string   "education"
-    t.string   "address"
-    t.string   "phone"
-    t.string   "photo"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
