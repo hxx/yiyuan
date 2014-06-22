@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :credentials, skip: [:registrations, :confirmations]
 
   resources :ability_tags
+  resources :operators
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
