@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140621081414) do
+ActiveRecord::Schema.define(version: 20140622012450) do
 
   create_table "ability_tags", force: true do |t|
     t.string   "name"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20140621081414) do
   add_index "ability_tags_products", ["ability_tag_id"], name: "index_ability_tags_products_on_ability_tag_id", using: :btree
 
   create_table "administrators", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -102,6 +103,7 @@ ActiveRecord::Schema.define(version: 20140621081414) do
 
   create_table "credentials", force: true do |t|
     t.string   "email"
+    t.string   "name"
     t.integer  "credentialable_id"
     t.string   "credentialable_type"
     t.datetime "created_at"
@@ -131,41 +133,13 @@ ActiveRecord::Schema.define(version: 20140621081414) do
   end
 
   create_table "managers", force: true do |t|
-    t.string   "staff_code"
     t.string   "name"
-    t.string   "gender"
-    t.string   "id_card"
-    t.date     "birthday"
-    t.integer  "age"
-    t.integer  "weight"
-    t.integer  "height"
-    t.string   "native_place"
-    t.string   "race"
-    t.string   "political_status"
-    t.string   "education"
-    t.string   "address"
-    t.string   "phone"
-    t.string   "photo"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "operators", force: true do |t|
-    t.string   "staff_code"
     t.string   "name"
-    t.string   "gender"
-    t.string   "id_card"
-    t.date     "birthday"
-    t.integer  "age"
-    t.integer  "weight"
-    t.integer  "height"
-    t.string   "native_place"
-    t.string   "race"
-    t.string   "political_status"
-    t.string   "education"
-    t.string   "address"
-    t.string   "phone"
-    t.string   "photo"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -208,6 +182,7 @@ ActiveRecord::Schema.define(version: 20140621081414) do
   end
 
   create_table "supervisors", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
