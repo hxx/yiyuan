@@ -1,0 +1,56 @@
+<div class="crumbs">
+  <ul id="breadcrumbs" class="breadcrumb">
+    <li>
+      <i class="icon-home"></i>
+      <%= link_to "首页", root_path %>
+    </li>
+    <li class="current">
+      <%= link_to "操作员管理", collection_path %>
+    </li>
+  </ul>
+
+  <ul class="breadcrumb pull-right">
+    <%= link_to new_resource_path, class: 'btn btn-sm btn-info pull-right' do %>
+    <i class="icon-plus" style="color:#fff"> 添加新的操作员 </i>
+    <% end %>
+  </ul>
+</div>
+
+<div class="row">
+  <div class="widget box">
+    <div class="widget-header">
+      <h4><i class="icon-user"></i>操作员列表</h4>
+    </div>
+
+    <div class="widget-content">
+      <table class="table table-hover table-striped">
+        <thead>
+          <tr>
+            <th>电子邮件</th>
+            <th>创建日期</th>
+            <th>最后登录时间</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @operators.each do |operator| %>
+            <tr>
+              <td><%= operator.credential.email rescue nil %></td>
+              <td><%= l operator.created_at, format: :long rescue nil %></td>
+              <td><%= l operator.last_sign_in_at, format: :long rescue nil %></td>
+              <td>
+                <%= link_to edit_resource_path(operator) do %>
+                  <i class="icon-edit"></i>修改
+                <% end %>
+                <%= link_to resource_path(operator), method: :delete do %>
+                  <i class="icon-trash"></i>删除
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
