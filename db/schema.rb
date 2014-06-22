@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140622012137) do
+ActiveRecord::Schema.define(version: 20140622012318) do
 
   create_table "ability_tags", force: true do |t|
     t.string   "name"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20140622012137) do
   add_index "ability_tags_products", ["ability_tag_id"], name: "index_ability_tags_products_on_ability_tag_id", using: :btree
 
   create_table "administrators", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
