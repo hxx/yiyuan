@@ -79,3 +79,8 @@ gem 'kaminari', '~> 0.16.1'
 # Flexible authentication solution for Rails with Warden
 # https://github.com/plataformatec/devise
 gem 'devise', '~> 3.2.4'
+
+# Inherited Resources speeds up development by making your controllers inherit
+# all restful actions so you just have to focus on what is important
+# https://github.com/josevalim/inherited_resources
+gem 'inherited_resources', '~> 1.5.0'

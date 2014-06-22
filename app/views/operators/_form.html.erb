@@ -1,0 +1,28 @@
+<%= simple_form_for operator, html: { class: 'form-horizontal' }, wrapper: :horizontal_form do |f| %>
+  <div class="widget box">
+    <div class="widget-header">
+      <h4><i class="icon-user"></i>基本信息</h4>
+    </div>
+
+    <div class="widget-content">
+      <%= f.input :name, label: '姓名' %>
+    </div>
+  </div>
+
+  <div class="widget box">
+    <div class="widget-header">
+      <h4><i class="icon-key"></i>登录凭证信息</h4>
+    </div>
+    <div class="widget-content">
+      <%= f.fields_for :credential, html: { class: 'form-horizontal' }, wrapper: :horizontal_form do |credential_fields| %>
+        <%= credential_fields.input :email, label: '电子邮件' %>
+
+        <%= credential_fields.input :password, label: '密码' %>
+
+        <%= credential_fields.input :password_confirmation, label: '确认密码' %>
+      <% end %>
+    </div>
+  </div>
+
+  <%= f.button :submit %>
+<% end %>
