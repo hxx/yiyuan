@@ -169,11 +169,6 @@ ActiveRecord::Schema.define(version: 20140622012450) do
     t.datetime "updated_at"
   end
 
-  create_table "products_ability_tags", force: true do |t|
-    t.integer "ability_tag_id"
-    t.integer "product_id"
-  end
-
   create_table "service_logs", force: true do |t|
     t.integer  "order_id"
     t.string   "state"
